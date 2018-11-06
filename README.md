@@ -3,9 +3,9 @@ This is a repository for bachelor's thesis written in School of Linguistics, NRU
 
 ## What is this about?
 
-I already did a project on Russian Drama Corpus and its stage directions — it can be found here: [https://github.com/creaciond/russian-drama](Stage Directions in Russian Drama). It dealt more with the quantitative part of the research and exploring corpus trends; at this one, I want to focus on the part which deals more with computational linguistics and machine learning, that is to extract linguistic features and run several different models.
+I already did a project on Russian Drama Corpus and its stage directions — it can be found here: [Stage Directions in Russian Drama](https://github.com/creaciond/russian-drama). It dealt more with the quantitative part of the research and exploring corpus trends; at this one, I want to focus on the part which deals more with computational linguistics and machine learning, that is to extract linguistic features and run several different models.
 
-Russian Drama Corpus (or shortly, RusDraCor) can be found at [https://github.com/dracor-org/rusdracor](dracor-org/rusdracor); it is also available in a more user-friendly format at [https://dracor.org/rus](Dracor website).
+Russian Drama Corpus (or shortly, RusDraCor) can be found at [dracor-org/rusdracor](https://github.com/dracor-org/rusdracor); it is also available in a more user-friendly format at [Dracor website](https://dracor.org/rus).
 
 ## What's inside
 
@@ -30,7 +30,7 @@ Nothing so far :) But there will be:
 
 **January**
 [ ] _First attempts?_ — I should take a look at what we’ve done for my 3rd year paper, take into consideration the September meetup feedback and try to do something with that
-[ ] _Rule-based classification_ — we have some super-typical directions, such as уходит for exit or входит for entry; we can separate those by applying certain rules; at least, that would cut off several types
+[ ] _Rule-based classification_ — we have some super-typical directions, such as _уходит_ for exit or _входит_ for entry; we can separate those by applying certain rules; at least, that would cut off several types
 
 **February**
 [ ] _Machine learning_ — creating and running new models based on machine learning algorithms; some work is already done, and this is the time to compare different models/algorithms
