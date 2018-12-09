@@ -108,3 +108,6 @@ venv.bak/
 *.iml
 .idea
 out
+
+# VS Code
+.vscode
