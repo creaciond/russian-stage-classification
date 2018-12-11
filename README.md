@@ -1,5 +1,5 @@
 # Short Text Classification: a Case of Stage Directions in Russian Drama
-This is a repository for bachelor's thesis written in School of Linguistics, NRU HSE, in academic year of 2018/19. 
+This is a repository for BA thesis written in School of Linguistics, NRU HSE (Moscow, RU), throughout the 2018/19 academic year. 
 
 ## What is this about?
 
@@ -25,7 +25,11 @@ Nothing so far :) But there will be:
 
 - [ ] _Literature analysis_ — it seems that there is some existing work in the field, so I'd better get acquainted with that. The majority of works I’ve seen so far treat this problem in the light of information retrieval, they are generating a search query out of the texts — which can help in highlighting the most important words. There’s also plenty of works regarding tweets classification
 
-- [ ] _Analysing other TEI corpora_ — there is a certain corpus (a Shakespeare corpus, for sure; probably, also a French one?) which already have their <stage> annotations; it might be worthy to contact them and ask whether that was done manually or with some programming
+_UPD Dec 10:_ at least I got in gathered!
+
+- [x] _Analysing other TEI corpora_ — there is a certain corpus (a Shakespeare corpus, for sure; probably, also a French one?) which already have their <stage> annotations; it might be worthy to contact them and ask whether that was done manually or with some programming
+  
+- [x] _Preprocessing enhancement_  — preprocessing for quantitative research didn't treat NEs (named entities) as proper names. This time, all named entities should have the same "special" word (`ИМЯ`) and the same POS tag (`PROPN`).
 
 **December**
 
