@@ -71,7 +71,7 @@ def prepare_for_classification(directions_lemmas, directions_pos, stops):
             lemma_analyzed = mystem.analyze(lemma)
             all_gr = lemma_analyzed[0]['analysis'][0]['gr']
             pos = all_gr.split(",")[1]
-            if pos == "имя":
+            if (pos == "имя") or (pos == "отч"):     
                 clf_lemmas[dir_num][lem_num] = "ИМЯ"
                 directions_pos[dir_num][lem_num] = "PROPN"
         if len(directions_pos[dir_num]) == len(clf_lemmas[dir_num]):
