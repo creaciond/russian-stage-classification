@@ -61,9 +61,9 @@ def play_metadata_api(play_id):
         segments: int
     """
     play_data = {"title": "",
-    "author": "",
-    "characters": 0,
-    "segments": 0
+        "author": "",
+        "characters": 0,
+        "segments": 0
     }
     request_link = "https://dracor.org/api/corpora/rus/play/{}".format(play_id)
     response = requests.get(request_link)
