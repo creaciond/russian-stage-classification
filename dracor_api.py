@@ -42,7 +42,7 @@ def download_directions(play_id):
     return directions
 
 
-def play_data_api(play_id):
+def play_metadata_api(play_id):
     """Fetch play metadata from DraCor API, including:
         play title,
         playwriter's full name (important to distinguish between Leo Tolstoy and 
