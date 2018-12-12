@@ -26,7 +26,7 @@ def load_directions(folder, play_id):
     
     :returns play_dirs - (list of str) directions from the file
     """
-    full_path = os.path.join(folder, play_txt)
+    full_path = os.path.join(folder, play_id)
     with open(full_path, "r", encoding="utf-8") as f:
         directions = f.read().split("/n")
     return directions
