@@ -5,7 +5,7 @@ import requests
 import os
 
 
-def get_play_names(request_link):
+def get_play_names():
     """Makes a request to RusDraCor API to get all play ids, generally constructed
     as "author-drama-name".
 
@@ -14,6 +14,7 @@ def get_play_names(request_link):
     :returns play_ids - (list of str) ids for all the plays currently present in the
     corpus"""
     play_ids = []
+    request_link = "https://dracor.org/api/corpora/rus"
     response = requests.get(request_link)
     if response:
         all_plays = response.json()["dramas"]
