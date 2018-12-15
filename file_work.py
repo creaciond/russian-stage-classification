@@ -29,5 +29,5 @@ def load_directions(folder, play_id):
     play_txt = play_id + ".txt"
     full_path = os.path.join(folder, play_txt)
     with open(full_path, "r", encoding="utf-8") as f:
-        directions = f.read().split("/n")
+        directions = f.read().split("\n")
     return directions
