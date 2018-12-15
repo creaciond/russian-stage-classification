@@ -1,6 +1,5 @@
 from copy import copy
 from nltk.corpus import stopwords
-from nltk.tokenize import wordpunct_tokenize
 from pymystem3 import Mystem
 import warnings
 
@@ -58,10 +57,10 @@ def prepare_for_classification(directions_lemmas, directions_pos, stops):
     direction
     :arg stops - (set of str) all stopwords to remove
 
-    :return clf_drections - (list of str) directions ready for putting into
+    :return clf_all_directions - (list of str) directions ready for putting into
     classifiers
     :return clf_pos - (list of str) POS of corresponding lemmas"""
-    clf_all_drections = []
+    clf_all_directions = []
     clf_lemmas = copy(directions_lemmas)
     for dir_num, direction_l in enumerate(directions_lemmas):
         for lem_num, lemma in enumerate(direction_l):
@@ -76,5 +75,5 @@ def prepare_for_classification(directions_lemmas, directions_pos, stops):
                 directions_pos[dir_num][lem_num] = "PROPN"
         if len(directions_pos[dir_num]) == len(clf_lemmas[dir_num]):
             clf_direction = clf_lemmas[dir_num] + directions_pos[dir_num]
-            clf_all_drections.append(clf_direction)
-    return clf_all_drections
+            clf_all_directions.append(clf_direction)
+    return clf_all_directions
