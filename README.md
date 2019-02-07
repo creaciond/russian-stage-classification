@@ -23,7 +23,7 @@ Nothing so far :) But there will be:
 
 **November**
 
-- [ ] _Literature analysis_ — it seems that there is some existing work in the field, so I'd better get acquainted with that. The majority of works I’ve seen so far treat this problem in the light of information retrieval, they are generating a search query out of the texts — which can help in highlighting the most important words. There’s also plenty of works regarding tweets classification
+- [x] _Literature analysis_ — it seems that there is some existing work in the field, so I'd better get acquainted with that. The majority of works I’ve seen so far treat this problem in the light of information retrieval, they are generating a search query out of the texts — which can help in highlighting the most important words. There’s also plenty of works regarding tweets classification
 
 _UPD Dec 10:_ at least I got in gathered!
 
@@ -35,17 +35,17 @@ _UPD Dec 10:_ at least I got in gathered!
 
 - [ ] _Data (re)annotation_ — probably the previous annotation was inconsistent and it would be nice to take another look at it; also, the machine learning algorithms (not to mention neural networks!) need quite a lot of data, so probably I should annotate another couple of plays — that shouldn’t take long; I believe I also need to annotate a separate play or two for a test set
 
-- [ ] _Data analysis_ — after annotating, I should definitely take a very intent look at the types and discover as many trends as possible
+- [x] _Data analysis_ — after annotating, I should definitely take a very intent look at the types and discover as many trends as possible
 
-- [ ] _Feature extraction_ — last year, we did morphology and some kind of semantics; this year, I want to do semantics based on vector models, and also some syntax analysis. There’s some problem with that, as there are several syntax parsers for Russian, and I have to decide which one works best for the case
+- [x] _Feature extraction_ — last year, we did morphology and some kind of semantics; this year, I want to do semantics based on vector models, and also some syntax analysis. There’s some problem with that, as there are several syntax parsers for Russian, and I have to decide which one works best for the case
 
 ### Winter/spring semester, 2019
 
 **January**
 
-- [ ] _First attempts?_ — I should take a look at what we’ve done for my 3rd year paper, take into consideration the September meetup feedback and try to do something with that
+- [x] _First attempts?_ — I should take a look at what we’ve done for my 3rd year paper, take into consideration the September meetup feedback and try to do something with that
 
-- [ ] _Rule-based classification_ — we have some super-typical directions, such as _уходит_ for exit or _входит_ for entry; we can separate those by applying certain rules; at least, that would cut off several types
+- [x] _Rule-based classification_ — we have some super-typical directions, such as _уходит_ for exit or _входит_ for entry; we can separate those by applying certain rules; at least, that would cut off several types
 
 **February**
 
