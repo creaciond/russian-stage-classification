@@ -49,15 +49,17 @@ _UPD Dec 10:_ at least I got in gathered!
 
 **February**
 
-- [ ] _Machine learning_ — creating and running new models based on machine learning algorithms; some work is already done, and this is the time to compare different models/algorithms
+- [x] _Machine learning_ — creating and running new models based on machine learning algorithms; some work is already done, and this is the time to compare different models/algorithms
 
 - [ ] _Neural networks_ — run several experiments on neural networks of simple architecture; I doubt that the performance is going to be much better than simpler models, because the networks require so much more data (like, in some papers they use 10k examples for training — that’s approximately the half of stage directions we have in RusDraCor
+
+_UPD April 24:_ insufficient data amount, don't think I'm going to do this
 
 **March**
 
 - [ ] _Neural networks p2_ — running all the popular network configurations on the same material
 
-- [ ] _Combining rules and machine learning_ — at this point, we should get an idea of how well different models are working, so probably some combinations will be more resultative?
+- [x] _Combining rules and machine learning_ — at this point, we should get an idea of how well different models are working, so probably some combinations will be more resultative?
 
 **April, May**
 
@@ -67,6 +69,6 @@ _UPD Dec 10:_ at least I got in gathered!
 
 |**Module**|**Event**                    |**Date**             |
 |:--------:|:---------------------------:|:-------------------:|
-|3rd       |Project Proposal presentation|TBA _(end of March?)_|
-|4th       |Written paper deadline       |TBA                  |
-|4th       |Final thesis presentation    |TBA _(early June?)_  |
+|3rd       |Project Proposal presentation|March 26, 2019|
+|4th       |Written paper deadline       |June 4, 2019|
+|4th       |Final thesis presentation    |June 17, 2019|
