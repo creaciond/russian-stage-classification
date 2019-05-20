@@ -114,6 +114,7 @@ out
 
 # WIP files
 test.py
-data/stage/
+data/stage/templates
 data/models/
 test-notebook.ipynb
+darias-aws.pem
