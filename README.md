@@ -33,7 +33,9 @@ _UPD Dec 10:_ at least I got in gathered!
 
 **December**
 
-- [ ] _Data (re)annotation_ — probably the previous annotation was inconsistent and it would be nice to take another look at it; also, the machine learning algorithms (not to mention neural networks!) need quite a lot of data, so probably I should annotate another couple of plays — that shouldn’t take long; I believe I also need to annotate a separate play or two for a test set
+- [x] _Data (re)annotation_ — probably the previous annotation was inconsistent and it would be nice to take another look at it; also, the machine learning algorithms (not to mention neural networks!) need quite a lot of data, so probably I should annotate another couple of plays — that shouldn’t take long; I believe I also need to annotate a separate play or two for a test set
+
+_UPD May:_ it's FINALLY over!
 
 - [x] _Data analysis_ — after annotating, I should definitely take a very intent look at the types and discover as many trends as possible
 
@@ -51,13 +53,7 @@ _UPD Dec 10:_ at least I got in gathered!
 
 - [x] _Machine learning_ — creating and running new models based on machine learning algorithms; some work is already done, and this is the time to compare different models/algorithms
 
-- [ ] _Neural networks_ — run several experiments on neural networks of simple architecture; I doubt that the performance is going to be much better than simpler models, because the networks require so much more data (like, in some papers they use 10k examples for training — that’s approximately the half of stage directions we have in RusDraCor
-
-_UPD April 24:_ insufficient data amount, don't think I'm going to do this
-
 **March**
-
-- [ ] _Neural networks p2_ — running all the popular network configurations on the same material
 
 - [x] _Combining rules and machine learning_ — at this point, we should get an idea of how well different models are working, so probably some combinations will be more resultative?
 
