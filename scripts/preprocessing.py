@@ -34,7 +34,7 @@ def extract_pos(directions_raw, mystem):
     :arg mystem - an instance of Mystem, morphological analyzer, part of
     pymoystem3 module (a Python wrapper for the original programme)
 
-    :return directions_morph - (list of str lists) list of POS tags for each
+    :return directions_pos - (list of str lists) list of POS tags for each
     direction"""
     directions_pos = []
     for direction in directions_raw:
