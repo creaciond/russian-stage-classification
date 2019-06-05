@@ -26,4 +26,4 @@ Russian Drama Corpus (or shortly, RusDraCor) can be found at [dracor-org/rusdrac
 |:--------:|:---------------------------:|:-------------------:|
 |3rd       |Project Proposal presentation|March 26, 2019|
 |4th       |Written paper deadline       |June 4, 2019|
-|4th       |Final thesis presentation    |June 17, 2019|
+|4th       |Final thesis presentation    |June 18, 2019|
