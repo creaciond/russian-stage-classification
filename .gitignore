@@ -119,3 +119,6 @@ data/models/
 data/ml
 test-notebook.ipynb
 darias-aws.pem
+
+# data from annotators for human factor research
+hfi/
