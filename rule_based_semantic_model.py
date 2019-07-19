@@ -1,44 +1,45 @@
+# encoding: utf-8
+
 import gensim
 import numpy as np
 import pandas as pd
 import wget
 import zipfile
 
+from sklearn.metrics.pairwise import cosine_similarity
 
-class SemanticRuleClassifier():
-    
-    def __init__(self, model_path):
-        """Initiates a classifier based on a given model (stored in a zipped file).
+class SemanticRuleClassfier:
 
-        :args model_path — (str) path to model .zip files
+    def __init__(self):
+        """Initiates a classifier.
         """
-        with zipfile.ZipFile(model_path, "r") as archive:
+        print("Started loading w2v model")
+        with zipfile.ZipFile("./data/models/180.zip", "r") as archive:
             stream = archive.open("model.bin")
             model = gensim.models.KeyedVectors.load_word2vec_format(stream,
                 binary=True)
         self.model = model
+        print("Loaded w2v model")
+        self.similar_entrance = set([v[0] for v in model.most_similar("входить_VERB")])
+        self.similar_exit = set([v[0] for v in model.most_similar("уходить_VERB")])
+        print("Stored most similar verbs")
 
-        self.popular_entrance = set(model.most_similar("входить_VERB"))
-        print(self.popular_entrance)
-        self.popular_exit = set(model.most_similar("уходить_VERB"))
-        print(self.popular_exit)
-
-    def check_for_frequent(self, direction_verbs):
+    def check_for_similar(self, direction_verbs):
         """Easiest prediction case — direction contains a verb from the list
-        of most frequent verbs either for entrance or for exit.
+        of most similar verbs either for entrance or for exit.
 
         :args direction_verbs — (list of str) verbs to check
 
         :returns direction type — (str) one of the values: "entrance", "exit", or an empty string
         """
         for verb in direction_verbs:
-            if verb in self.popular_entrance:
+            if verb in self.similar_entrance:
                 return "entrance"
-            elif verb in self.popular_exit:
+            elif verb in self.similar_exit:
                 return "exit"
             else:
                 return ""
-
+    
     def compute_vector(self, direction_verbs):
         """Computes a word2vec vector for a given list of tokens in the direction.
         Tokens are preprocessed lemmas combined with their part of speech in 
@@ -57,22 +58,10 @@ class SemanticRuleClassifier():
                 total_counter += 1
             except:
                 continue
-        res_vector = total_vector / total_counter
+        res_vector = np.array(total_vector / total_counter)
         return res_vector
 
-    def vec_similarity(self, v1, v2):
-        """Computes cosine similarity between two vectors.
-
-        :args v1, v2 — (np.ndarray) w2v vectors
-
-        :returns cosine — (float) cosine similarity
-        """
-        v1_norm = gensim.matutils.unitvec(np.array(v1).astype(float))
-        v2_norm = gensim.matutils.unitvec(np.array(v2).astype(float))
-        cosine = np.dot(v1_norm, v2_norm)
-        return cosine
-
-    def non_frequent_case(self, direction_vector):
+    def non_similar_case(self, direction_vector):
         """Decides on a direction type based on overall w2v vector for a direction.
 
         :args direction_vector — (np.ndarray) pre-computed vector for a direction to 
@@ -80,8 +69,8 @@ class SemanticRuleClassifier():
 
         :returns dir_type — (str) chosen type
         """
-        sim_entrance = self.vec_similarity(direction_vector, self.model.wv["входить_VERB"])
-        sim_exit = self.vec_similarity(direction_vector, self.model.wv["уходить_VERB"])
+        sim_entrance = cosine_similarity(direction_vector, self.model.wv["входить_VERB"])
+        sim_exit = cosine_similarity(direction_vector, self.model.wv["уходить_VERB"])
         if sim_entrance > sim_exit:
             dir_type = "entrance"
         elif sim_entrance < sim_exit:
@@ -96,15 +85,15 @@ class SemanticRuleClassifier():
 
         :returns dir_type — (str) assigned type
         """
-        dir_type = self.check_for_frequent(direction_verbs)
+        dir_type = self.check_for_similar(direction_verbs)
         print("frequency check: {}".format(dir_type))
         if dir_type == "":
             print("computing vector")
             direction_vector = self.compute_vector(direction_verbs)
-            dir_type = self.non_frequent_case(direction_vector)
+            dir_type = self.non_similar_case(direction_vector)
         print("final decision: {}".format(dir_type))
         return dir_type
-
+    
     def predict(self, directions, goal_label):
         """Overall prediction function.
 
@@ -114,10 +103,11 @@ class SemanticRuleClassifier():
         if the predicted label matches the goal label, otherwise 0
         """
         labels_pred = []
-        print("woah")
         for direction in directions:
             print(direction)
             label_pred = self.single_prediction(direction)
+            print("Preicted: ", label_pred)
+            print("Goal: ", goal_label)
             if label_pred == goal_label:
                 labels_pred.append(1)
             else:

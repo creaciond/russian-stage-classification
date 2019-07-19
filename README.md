@@ -12,7 +12,7 @@ Russian Drama Corpus (or shortly, RusDraCor) can be found at [dracor-org/rusdrac
 |**Content**|**Notebook**|**Additional**|
 |:--:|:--:|:--:|
 |retrieving and downloading data|[api-data-preprocessing.ipynb](./api-data-preprocessing.ipynb)|[dracor_api.py](./dracor_api.py), [file_work.py](./file_work.py)|
-|annotation description||to copy from main text|
+|annotation description||[annotation_guide.md](./annotation_guide.md)|
 |morphology, NER, stopwords, etc.|[linguistic-features.ipynb](./linguistic-features.ipynb)||
 |semantics hypothesis + test on 2018 data|[semantic-rules.ipynb](./semantic-rules.ipynb)||
 |working with the final dataset|[dataset-separation.ipynb](./dataset-separation.ipynb)||
