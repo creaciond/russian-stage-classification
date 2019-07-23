@@ -120,5 +120,8 @@ data/ml
 test-notebook.ipynb
 darias-aws.pem
 
+# in order not to commit files with weird names
+Untitled.ipynb
+
 # data from annotators for human factor research
 hfi/
