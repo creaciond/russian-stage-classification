@@ -9,6 +9,8 @@ Russian Drama Corpus (or shortly, RusDraCor) can be found at [dracor-org/rusdrac
 
 ## What's inside?
 
+### Code
+
 |**Content**|**Notebook**|**Additional**|
 |:--:|:--:|:--:|
 |retrieving and downloading data|[api-data-preprocessing.ipynb](./api-data-preprocessing.ipynb)|[dracor_api.py](./dracor_api.py), [file_work.py](./file_work.py)|
@@ -19,6 +21,15 @@ Russian Drama Corpus (or shortly, RusDraCor) can be found at [dracor-org/rusdrac
 |model fitting: _entrance_  and _exit_|[fitting-semantic-types.ipynb](./fitting-semantic-types.ipynb)|[data_preparation.py](./data_preparation.py), [model_fitting.py](./model_fitting.py), separate semantic class to come|
 |model fitting: other types|[fitting-nonsemantic-types.ipynb](./fitting-nonsemantic-types.ipynb)|[data_preparation.py](./data_preparation.py), [model_fitting.py](./model_fitting.py)|
 
+### Original paper
+
+Is also here in the repo: [pdf](./maksimova_dm_short-text-classification-a-case-of-stage-directions-in-russian-drama.pdf)
+
+### Slides
+
+TEI 2019 (Sep 20, 2019): [Using Machine Learning for the Automated Classification of Stage Directions in TEI-Encoded Drama Corpora](https://shorturl.at/jEFJR)
+
+Thesis defence (Jun 17, 2019): [Short Text Classification: a Case of Stage Directions in Russian Drama](./2019-06-17_presentation.pdf)
 
 ## Important dates
 
