@@ -1,6 +1,10 @@
 # Short Text Classification: a Case of Stage Directions in Russian Drama
 This is a repository for BA thesis written in School of Linguistics, NRU HSE (Moscow, RU), throughout the 2018/19 academic year. 
 
+UPD: all notebooks are now available in Binder! Click the badge to proceed:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/creaciond/russian-stage-classification/815c0f299a48ba2efbd7e80bfae522c997ebd0d3)
+
 ## What is this about?
 
 I already did a project on Russian Drama Corpus and its stage directions — it can be found here: [Stage Directions in Russian Drama](https://github.com/creaciond/russian-drama). It dealt more with the quantitative part of the research and exploring corpus trends; at this one, I want to focus on the part which deals more with computational linguistics and machine learning, that is to extract linguistic features and run several different models.
